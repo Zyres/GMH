@@ -1,12 +1,12 @@
-The version in here is Patch 3.3.5 AscEmu Server
+## The version in here is Patch 3.3.5 AscEmu Server
 
-Developers:
-Marforius - https://github.com/Marforius
-Maven(aka deathdude) - Maven01@live.com
-Skate (Ex-Developer) (Skate555@gmail.com) (For keeping this project on it's feet and moving forward)
-lawl (Ex-Developer) - lawl@thedanisme.com
-Ohm (a.k.a. dx and Echo) (Thank you for getting the ball rolling)
-Rushowr and his team (Original Idea)
-1337dood (TicketTracker) (If it wasn't for the TicketTracker...nobody would use this thing)
-Mukele (ItemSearchForm)
-Stewart - Solved the "Enter" bug on the TicketTracker
+## Install
+
+To download the latest Release of GMH, please click the download as zip button on github.
+You may also use the git client of your choice to download and version the build.
+To use GMH, please put the content's of the git repo's GMH folder under “World of Warcraft\Interface\AddOns\”
+
+### Copyright and other stuff
+* [License](LICENSE.md)
+* [Thanks to all](THANKS.md)
+* [Terms of use](TERMS OF USE AGREEMENT)
