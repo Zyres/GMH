@@ -1,0 +1,216 @@
+-------------------------------------------------
+Changelog - 1.1.2 - Revision 281
+-------------------------------------------------
+FullFrom:
+Changes in the main interface and reorganization (credits: Marforius by appearance.).
+
+EventForm:
+You can now ON and OFF to event world.
+
+QuickItems:
+Arena 8 and Tier 10.
+
+-------------------------------------------------
+Changelog - 1.1.1 - Revision 280
+-------------------------------------------------
+Main Changes:
+Toc bumped to 3.2
+Bug Fixes
+
+MinimapButton:
+The Open Ticket counter has been temporarily been removed
+
+ItemSearchForm:
+Item info is now properly displayed (credits: Krzysiek)
+
+-------------------------------------------------
+Changelog - 1.1.0 - Revision 273
+-------------------------------------------------
+Main Changes:
+3.1 and 3.2 Support Added (GMH officially supports both 3.1.X and 3.2.X clients)
+If you are not using a supported client, you will recieve an error message on login. You can still use GMH, but you will not recieve support.
+Bug Fixes / Code Cleanup
+
+GMH.lua:
+You can now lookup recall locations with the recall list function
+Raid Style Show Message has been added to ShowMessage(). BoolFrame Value is "2"
+PlaySoundF() was not being used.
+
+AnnounceForm:
+You can now preview saved messages when editing them
+
+BanForm:
+IP Ban Functions moved to new IPBan Form
+
+IPBanForm (New):
+IP Ban Functions from BanForm, moved here
+
+MinimapButton:
+Now only moves around the Minimap
+You can view how many open tickets there are by moving your mouse over the MinimapButton
+New Blizz logo icon
+
+ModifyForm:
+Major Cleanup. All Buttons have been moved into a drop down box where you can select what you would like to modify and then press "Go!"
+
+Options (New):
+New Options feature added. You can find it under Interface Options->AddOns
+
+ProfessionForm:
+Major Cleanup. All Buttons have been moved into a drop down box where you can select your desired profession and then press "Go!"
+When you press Done, it will now take you to SkillForm instead of the main form
+
+TicketTracker:
+Should now rejoin the Ticket Channel when changing maps
+
+ViewForm:
+Deleted. Moved into Interface Options
+
+WepSkForm:
+Major Cleanup. All Buttons have been moved into a drop down box where you can select your desired weapon skill and then press "Go!"
+
+Misc:
+Misc. Changes
+-------------------------------------------------
+Changelog - 1.0.3 - Revision 233
+-------------------------------------------------
+Main Changes:
+Bug Fixes / Code Cleanup
+
+GMH.lua:
+Quest Spawn will now port you to either the Quest Starter's Position or the Quest Finisher's Position depending on what you choose.
+Gameobjects should now save properly when spawned.
+FlySpeed should now function properly.
+-------------------------------------------------
+Changelog - 1.0.2 - Revision 202
+-------------------------------------------------
+Main Changes:
+Bug Fixes / Code Cleanup
+
+GMH.lua:
+GMOutfit function cleaned up
+Fixed Slash Command: /gm (on or off)
+Updated Slash Command: /gmh (show or hide) will now show or hide GMH. Doing /gmh will still just show the available commands
+
+ItemForm:
+Removed Stacks (Had no use)
+
+ItemSearchForm:
+Major Cleanup
+Will now show the proper Item Icon for each Item instead of a Question Mark (Blizzlike Items only)
+Would add a new button with your text if you said Item (in Team Chat for example)
+Would error out if searches were larger than 25 results (modded cores)
+
+TicketShowForm:
+Removed (Has been sitting there for months)
+
+TicketTracker:
+Alert should have been TT_Alert
+Category list was unused and thus removed. TicketTracker has been resized to fit this.
+
+Misc Changes:
+Changelog of versions 0.11.1 and earlier can now be found in Textures/BackupFiles.rar
+Misc. Cleanup
+
+-------------------------------------------------
+Changelog - 1.0.1 - Revision 173
+-------------------------------------------------
+Main Changes:
+Bug Fixes
+
+LookupForm:
+Form removed
+All Functions have been moved back to their respective places.
+
+TicketTracker:
+Tickets showing on the buttons and not in the frame should be fixed.
+
+Misc Changes:
+Removed some unnecessary arguments
+GMH no longer shows on login
+
+-------------------------------------------------
+Changelog - 1.0.0 - Revision 157
+-------------------------------------------------
+Main Changes:
+When a player presses enter in their ticket, it will no longer cut off. Thanks to Stewart of ArcEmu.
+Major Code Rewrite
+Welcome Skate back to the GMH Team! He's been back for just a little while and has already done so much!
+
+GMH.lua:
+Major Code Rewrite
+Implemented some checks to stop errors caused by the ItemSearchForm
+New Slash Command - "/achievecomplete" - Completes specified achievement
+New Slash Command - "/gm (on or off)" - Turns on or turns off GM Flag
+New Slash Command - "/kickplayer" - Kicks specified player w/ or w/o reason (e.g. /kickplayer Name Reason)
+New Slash Command - "/lookup" - Looks up term under specified subject (e.g. /lookup item Gamemaster)
+New Slash Command - "/showsavedannounce (or /showsaved or /ssa)" - Shows you saved announce under specified number (e.g. /ssa 1)
+New Dev Function - SendMessage(Msg, Hex, Frame) - Sends Message to specified frame
+Fixed Slash Command - "/savedannounce #" now sends specified saved announce from entire list
+
+AnnounceForm:
+Updated to represent the new limitless saved announces
+
+BanForm:
+Added Ban Acct feature
+Added Ban All feature
+Added Unban Acct feature
+Length is now in it's own EditBox
+Form rearranged
+
+CommForm:
+Saved announces are now limitless
+Form updated to represent
+
+ItemForm:
+Removed the Gold, Silver and Copper labels. It will instead pop up with the label when you enter the EditBox related to that currency
+New Item Stack EditBox
+
+LookupForm(New):
+Form for all .lookup commands
+Added Object, Faction, Item, Skill, Spell, NPC, Quest and Achieve lookups
+
+MiscForm:
+Added Restart, Shutdown, Cancel Shutdown, Save All, Mass Summon, Play to All, Cast All functions
+
+ModifyForm:
+Removed Popup on the EditBox
+
+NPCForm:
+NPCLookup moved to LookupForm
+
+ObjectForm:
+Added Object Scale feature
+ObjectLookup moved to LookupForm
+
+PlayerForm:
+Added Achievement Complete feature
+FactionLookup moved to LookupForm
+
+ProfessionsForm:
+It will now make sure you learn the Profession before skilling it up
+Form visually rearranged
+
+QuestForm:
+QuestLookup moved to LookupForm
+All QuestAdd's and QuestDel's have been put together. Now use the checkbox to decide what you want to do.
+
+QuickPortalForm(New):
+A form you can use to quickly spawn Portals. This form can be found through the ObjectForm
+Stormwind, Ironforge, Darnassus, Exodar, Orgrimmar, Undercity, Thunderbluff, Silvermoon, Shattrath, and Dalaran object spawns added.
+
+SkillForm:
+SkillLookup moved to LookupForm
+
+SpellForm:
+SpellLookup moved to LookupForm
+
+TeleForm:
+New PortUs feature (Ports you and player to location)
+
+TicketTracker:
+When player presses enter in their ticket, it will still show the full ticket.
+
+Misc:
+Many minor unimportant updates
+All EditBoxes will be cleared when they get hidden. Used to just be when you pressed done. Now it is whenever you close out of the form.

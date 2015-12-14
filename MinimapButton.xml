@@ -1,0 +1,74 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\..\FrameXML\UI.xsd">
+<Script file="MinimapButton.lua"/>
+<Button name="GMHelper_MinimapButton" toplevel="true" frameStrata="LOW" parent="Minimap" enableMouse="true" movable="true" hidden="false" clampedToScreen="true">
+	<Size>
+		<AbsDimension x="27" y="27"/>
+	</Size>
+	<Anchors>
+		<Anchor point="TOPLEFT" relativeTo="Minimap">
+			<Offset>
+				<AbsDimension x="-25" y="-60"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+	<Layers>
+		<Layer level="BACKGROUND">
+			<Texture name="$parent_Texture" file="Interface\CHATFRAME\UI-ChatIcon-Blizz">
+            	<Size>
+					<AbsDimension x="15" y="15"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="6" y="-6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<TexCoords left="0.075" right="0.925" top="0.075" bottom="0.925"/>
+			</Texture>
+		</Layer>
+	<Layer level="OVERLAY">
+		<Texture file="Interface\Minimap\MiniMap-TrackingBorder">
+			<Size>
+				<AbsDimension x="46" y="46"/>
+			</Size>
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+			</Anchors>
+		</Texture>
+	</Layer>
+	</Layers>
+	<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForDrag("RightButton");
+				self.dragme = false;
+				self:RegisterForClicks("LeftButtonUp");
+				self:RegisterEvent("VARIABLES_LOADED");
+			</OnLoad>
+			<OnEvent>
+				GMHMinimap_Initialize();
+				GMHMinimap_UpdatePosition();
+			</OnEvent>
+			<OnDragStart>
+				self.dragme = true;
+			</OnDragStart>
+			<OnDragStop>
+				self.dragme = false;
+			</OnDragStop>
+			<OnUpdate>
+				if self.dragme then GMHMinimap_BeingDragged(); end
+			</OnUpdate>
+			<OnClick>
+			ToggleAddon()
+			</OnClick>
+			<OnEnter>
+				GMHMinimap_Show()
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide()
+			</OnLeave>
+		</Scripts>
+</Button>
+</Ui>

@@ -1,0 +1,5 @@
+<Bindings>
+  <Binding name="ToggleAddon" description="Hide/Show GM Helper" header="GMHelper">
+    ToggleAddon();
+  </Binding>
+</Bindings>

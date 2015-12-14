@@ -1,0 +1,41 @@
+## Interface: 30300
+## Title: |cFF00FF00GMH (GameMaster's Helper) |r
+## Version: 1.1.2
+## Notes: An addon to manage GM commands in an AscEmu based World of Warcraft private server.
+## URL: https://github.com/armm77
+## X-Revision: 281
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: gmhview,TicketChannel,TicketPassword,savedannmsg,savedannflag,GMH_ShowOnLoad
+GMH.lua
+FullForm.xml
+MiniForm.xml
+MinipForm.xml
+bindings.xml
+MinimapButton.xml
+AnnounceForm.xml
+BanForm.xml
+BattlegroundForm.xml
+CommForm.xml
+EventForm.xml
+IPBanForm.xml
+ItemForm.xml
+ItemFormSearch.xml
+MiscForm.xml
+ModifyForm.xml
+NPCForm.xml
+ObjectForm.xml
+Options.xml
+OverridesForm.xml
+PlayerForm.xml
+ProfessionsForm.xml
+QuestForm.xml
+QuickItemForm.xml
+QuickPortalForm.xml
+SkillForm.xml
+SpellForm.xml
+TeleForm.xml
+WepskForm.xml
+TicketView.xml
+TicketTracker.xml
+TicketTracker.lua
