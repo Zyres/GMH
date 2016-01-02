@@ -945,6 +945,8 @@ function LearnRiding()
     outSAY("character learn 34091");--Artisan Riding
     outSAY("character learn 54197");--Cold Weather Flying
     outSAY("character additem 32458"); -- Ashes of Al'ar
+    outSAY("character additem 43962"); -- Reins of the White Polar Bear
+    outSAY("character additem 49290"); -- Magic Rooster Egg
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- SpellScript
