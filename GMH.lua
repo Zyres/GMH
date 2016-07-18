@@ -37,6 +37,8 @@ function ToggleAddon()
         ProfessionsForm:Hide();
         QuestForm:Hide();
         QuickItemForm:Hide();
+        ItemsetArena8:Hide();
+        ItemsetTier10:Hide();
         QuickPortalForm:Hide();
         SkillForm:Hide();
         SpellForm:Hide();
@@ -268,15 +270,15 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- ItemScript
 function RemoveItem()
-    outSAY("character removeitem "..ItemNumber:GetText());
+    outSAY("char removeitem "..ItemNumber:GetText());
 end
 
 function AddItem()
-    outSAY("character additem "..ItemNumber:GetText().." "..ItemQuantity1:GetText());
+    outSAY("char add item "..ItemNumber:GetText().." "..ItemQuantity1:GetText());
 end
 
 function AddItemSet()
-    outSAY("character additemset "..ItemSetNumber:GetText());
+    outSAY("char add itemset "..ItemSetNumber:GetText());
 end
 
 function SearchItem()
@@ -576,8 +578,8 @@ local selection = UIDropDownMenu_GetText(ProfComboBox)
     elseif selection == "First Aid" then
         profession = 129;
     end
-    outSAY("character advancesk "..profession);
-    outSAY("character advancesk "..profession.." "..SkillLevel:GetText());
+    outSAY("char advancesk "..profession);
+    outSAY("char advancesk "..profession.." "..SkillLevel:GetText());
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --QuestScript
@@ -644,241 +646,207 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --QuickItemScript
 function GmOutfit()
-    outSAY("character additem 192");--Martin Thunder
-    outSAY("character additem 2586");--Gamemaster's Robe
-    outSAY("character additem 11508");--Gamemaster's Slippers
-    outSAY("character additem 12064");--Gamemaster's Hood
-    outSAY("character additem 19879");--Alex's Test Beatdown Staff
-    outSAY("character additem 19160");--Contest Winner's Tabbard
-    outSAY("character additem 12947 2");--Alex's Ring of Audacity X2
-    outSAY("character additem 23162 4");--Foror's Crate of Endless Resist Gear Storage X4
+    outSAY("char add item 192");--Martin Thunder
+    outSAY("char add item 2586");--Gamemaster's Robe
+    outSAY("char add item 11508");--Gamemaster's Slippers
+    outSAY("char add item 12064");--Gamemaster's Hood
+    outSAY("char add item 19879");--Alex's Test Beatdown Staff
+    outSAY("char add item 19160");--Contest Winner's Tabbard
+    outSAY("char add item 12947 2");--Alex's Ring of Audacity X2
+    outSAY("char add item 23162 4");--Foror's Crate of Endless Resist Gear Storage X4
 end
 
-function MageA8()
+function Food()
+    outSAY("char add item 45932 20");--Black Jelly
+end
+
+function Potion()
+    outSAY("char add item 41166 20");--Runic Healing Injector X20
+    outSAY("char add item 42545 20");--Runic Mana Injector X20
+end
+
+function Gold()
+    outSAY("char add gold 5000");--Gold
+end
+
+-------- Item Set Arena 8 --------
+function MageA8R()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Regalia
-    outSAY("character additem 51463");
-    outSAY("character additem 51464");
-    outSAY("character additem 51465");
-    outSAY("character additem 51466");
-    outSAY("character additem 51467");
+    outSAY("char add itemset -280"); -- Wrathful Gladiator's Regalia
 end
 
-function HunterA8()
+function DeathKnightA8D()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Pursuit
-    outSAY("character additem 51458");
-    outSAY("character additem 51459");
-    outSAY("character additem 51460");
-    outSAY("character additem 51461");
-    outSAY("character additem 51462");
+    outSAY("char add itemset -269"); -- Wrathful Gladiator's Desecration
 end
 
-function RogueA8()
+function HunterA8P()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Vestments
-    outSAY("character additem 51492");
-    outSAY("character additem 51493");
-    outSAY("character additem 51494");
-    outSAY("character additem 51495");
-    outSAY("character additem 51496");
+    outSAY("char add itemset -273"); -- Wrathful Gladiator's Pursuit
 end
 
-function WarlockA8()
+function RogueA8V()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Felshroud
-    outSAY("character additem 51536");
-    outSAY("character additem 51537");
-    outSAY("character additem 51538");
-    outSAY("character additem 51539");
-    outSAY("character additem 51540");
+    outSAY("char add itemset -277"); -- Wrathful Gladiator's Vestments
 end
 
-function WarriorA8()
+function WarlockA8F()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Battlegear
-    outSAY("character additem 51541");
-    outSAY("character additem 51542");
-    outSAY("character additem 51543");
-    outSAY("character additem 51544");
-    outSAY("character additem 51545");
+    outSAY("char add itemset -281"); -- Wrathful Gladiator's Felshroud
 end
 
-function ShamanA8()
+function WarriorA8B()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Earthshaker
-    outSAY("character additem 51503");
-    outSAY("character additem 51504");
-    outSAY("character additem 51505");
-    outSAY("character additem 51506");
-    outSAY("character additem 51508");
- -- Wrathful Gladiator's Thunderfist
-    outSAY("character additem 51509");
-    outSAY("character additem 51510");
-    outSAY("character additem 51511");
-    outSAY("character additem 51512");
-    outSAY("character additem 51514");
- -- Wrathful Gladiator's Wartide
-    outSAY("character additem 51497");
-    outSAY("character additem 51498");
-    outSAY("character additem 51499");
-    outSAY("character additem 51500");
-    outSAY("character additem 51502");
+    outSAY("char add itemset -266"); -- Wrathful Gladiator's Battlegear
 end
 
-function PriestA8()
+function PriestA8I()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Investiture
-    outSAY("character additem 51482");
-    outSAY("character additem 51483");
-    outSAY("character additem 51484");
-    outSAY("character additem 51485");
-    outSAY("character additem 51486");
- -- Wrathful Gladiator's Raiment
-    outSAY("character additem 51487");
-    outSAY("character additem 51488");
-    outSAY("character additem 51489");
-    outSAY("character additem 51490");
-    outSAY("character additem 51491");
+    outSAY("char add itemset -278"); -- Wrathful Gladiator's Investiture
 end
 
-function DruidA8()
+function PriestA8R()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Refuge
-    outSAY("character additem 51419");
-    outSAY("character additem 51420");
-    outSAY("character additem 51421");
-    outSAY("character additem 51422");
-    outSAY("character additem 51424");
- -- Wrathful Gladiator's Sanctuary
-    outSAY("character additem 51425");
-    outSAY("character additem 51426");
-    outSAY("character additem 51427");
-    outSAY("character additem 51428");
-    outSAY("character additem 51430");
- -- Wrathful Gladiator's Wildhide
-    outSAY("character additem 51433");
-    outSAY("character additem 51434");
-    outSAY("character additem 51435");
-    outSAY("character additem 51436");
-    outSAY("character additem 51438");
+    outSAY("char add itemset -279"); -- Wrathful Gladiator's Raiment
 end
 
-function PaladinA8()
+function PaladinA8R()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Redemption
-    outSAY("character additem 51468");
-    outSAY("character additem 51469");
-    outSAY("character additem 51470");
-    outSAY("character additem 51471");
-    outSAY("character additem 51473");
- -- Wrathful Gladiator's Vindication
-    outSAY("character additem 51474");
-    outSAY("character additem 51475");
-    outSAY("character additem 51476");
-    outSAY("character additem 51477");
-    outSAY("character additem 51479");
+    outSAY("char add itemset -268"); -- Wrathful Gladiator's Redemption
 end
 
-function DeathKnightA8()
+function PaladinA8V()
     outSAY("modify level 80");--Levels Up To 80
- -- Wrathful Gladiator's Desecration
-    outSAY("character additem 51413");
-    outSAY("character additem 51414");
-    outSAY("character additem 51415");
-    outSAY("character additem 51416");
-    outSAY("character additem 51418");
+    outSAY("char add itemset -267"); -- Wrathful Gladiator's Vindication
 end
 
-function MageT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51280");--Sanctified Bloodmage Gloves
- outSAY("character additem 51281");--Sanctified Bloodmage Hood
- outSAY("character additem 51282");--Sanctified Bloodmage Leggings
- outSAY("character additem 51283");--Sanctified Bloodmage Robe
- outSAY("character additem 51284");--Sanctified Bloodmage Shoulderpads
+function ShamanA8E()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -271"); -- Wrathful Gladiator's Earthshaker
 end
 
-function HunterT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51285");--Sanctified Ahn'Kahar Blood Hunter's Handguards
- outSAY("character additem 51286");--Sanctified Ahn'Kahar Blood Hunter's Headpiece
- outSAY("character additem 51287");--Sanctified Ahn'Kahar Blood Hunter's Legguards
- outSAY("character additem 51288");--Sanctified Ahn'Kahar Blood Hunter's Spaulders
- outSAY("character additem 51289");--Sanctified Ahn'Kahar Blood Hunter's Tunic
+function ShamanA8T()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -270"); -- Wrathful Gladiator's Thunderfist
 end
 
-function RogueT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51250");--Sanctified Shadowblade Breastplate
- outSAY("character additem 51251");--Sanctified Shadowblade Gauntlets
- outSAY("character additem 51252");--Sanctified Shadowblade Helmet
- outSAY("character additem 51253");--Sanctified Shadowblade Legplates
- outSAY("character additem 51254");--Sanctified Shadowblade Pauldrons
+function ShamanA8W()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -272"); -- Wrathful Gladiator's Wartide
 end
 
-function WarlockT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51230");--Sanctified Dark Coven Gloves
- outSAY("character additem 51231");--Sanctified Dark Coven Hood
- outSAY("character additem 51232");--Sanctified Dark Coven Leggings
- outSAY("character additem 51233");--Sanctified Dark Coven Robe
- outSAY("character additem 51234");--Sanctified Dark Coven Shoulderpads
+function DruidA8R()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -274"); -- Wrathful Gladiator's Refuge
 end
 
-function WarriorT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51225");--Sanctified Ymirjar Lord's Battleplate
- outSAY("character additem 51226");--Sanctified Ymirjar Lord's Gauntlets
- outSAY("character additem 51227");--Sanctified Ymirjar Lord's Helmet
- outSAY("character additem 51228");--Sanctified Ymirjar Lord's Legplates
- outSAY("character additem 51229");--Sanctified Ymirjar Lord's Shoulderplates
+function DruidA8S()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -276"); -- Wrathful Gladiator's Sanctuary
 end
 
-function ShamanT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51240");--Sanctified Frost Witch's Shoulderguards
- outSAY("character additem 51241");--Sanctified Frost Witch's War-Kilt
- outSAY("character additem 51242");--Sanctified Frost Witch's Faceguard
- outSAY("character additem 51243");--Sanctified Frost Witch's Grips
- outSAY("character additem 51244");--Sanctified Frost Witch's Chestguard
+function DruidA8W()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -275"); -- Wrathful Gladiator's Wildhide
 end
 
-function PriestT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51260");--Sanctified Crimson Acolyte Gloves
- outSAY("character additem 51261");--Sanctified Crimson Acolyte Hood
- outSAY("character additem 51262");--Sanctified Crimson Acolyte Leggings
- outSAY("character additem 51263");--Sanctified Crimson Acolyte Robe
- outSAY("character additem 51264");--Sanctified Crimson Acolyte Shoulderpads
+-------- Item Set Tier 10 --------
+function MageT10R()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -247");--Sanctified Bloodmage's Regalia
 end
 
-function DruidT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51295");--Sanctified Lasherweave Handgrips
- outSAY("character additem 51296");--Sanctified Lasherweave Headguard
- outSAY("character additem 51297");--Sanctified Lasherweave Legguards
- outSAY("character additem 51298");--Sanctified Lasherweave Raiment
- outSAY("character additem 51299");--Sanctified Lasherweave Shoulderpads
+function HunterT10B()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -255");--Sanctified Ahn'Kahar Blood Hunter's Battlegear
 end
 
-function PaladinT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51275");--Sanctified Lightsworn Battleplate
- outSAY("character additem 51276");--Sanctified Lightsworn Gauntlets
- outSAY("character additem 51277");--Sanctified Lightsworn Helmet
- outSAY("character additem 51278");--Sanctified Lightsworn Legplates
- outSAY("character additem 51279");--Sanctified Lightsworn Shoulderplates
+function RogueT10B()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -254");--Sanctified Shadowblade's Battlegear
 end
 
-function DeathKnightT10()
- outSAY("modify level 80");--Levels Up To 80
- outSAY("character additem 51310");--Sanctified Scourgelord Battleplate
- outSAY("character additem 51311");--Sanctified Scourgelord Gauntlets
- outSAY("character additem 51312");--Sanctified Scourgelord Helmet
- outSAY("character additem 51313");--Sanctified Scourgelord Legplates
- outSAY("character additem 51314");--Sanctified Scourgelord Shoulderplates
+function WarlockT10R()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -248");--Sanctified Dark Coven's Regalia
 end
+
+function DeathKnightT10B()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -261");--Sanctified Scourgelord's Battlegear
+end
+
+function DeathKnightT10P()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -262");--Sanctified Scourgelord's Plate
+end
+
+function PriestT10R()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -249");--Sanctified Crimson Acolyte's Raiment
+end
+
+function PriestT10R2()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -250");--Sanctified Crimson Acolyte's Regalia
+end
+
+function WarriorT10B()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -259");--Sanctified Ymirjar Lord's Battleplate
+end
+
+function WarriorT10P()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -260");--Sanctified Ymirjar Lord's Plate
+end
+
+function DruidT10B()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -253");--Sanctified Lasherweave Battlegear
+end
+
+function DruidT10G()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -251");--Sanctified Lasherweave Garb
+end
+
+function DruidT10R()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -252");--Sanctified Lasherweave Regalia
+end
+
+function ShamanT10B()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -258");--Sanctified Frost Witch's Battlegear
+end
+
+function ShamanT10G()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -256");--Sanctified Frost Witch's Garb
+    outSAY("char add item 50464");--Totem of the Surging Sea
+end
+
+function ShamanT10R()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -257");--Sanctified Frost Witch's Regalia
+end
+
+function PaladinT10B()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -264");--Sanctified Lightsworn Battlegear
+end
+
+function PaladinT10G()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -263");--Sanctified Lightsworn Garb
+end
+
+function PaladinT10P()
+    outSAY("modify level 80");--Levels Up To 80
+    outSAY("char add itemset -265");--Sanctified Lightsworn Plate
+end
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- QuickPortalScript
 function QPStormwind()
@@ -927,39 +895,39 @@ function LookupSkill()
 end
 
 function LearnSkill()
-    outSAY("character advancesk "..SkillNumber:GetText().." "..SkillLvl:GetText().." "..SkillMax:GetText());
+    outSAY("char advancesk "..SkillNumber:GetText().." "..SkillLvl:GetText().." "..SkillMax:GetText());
 end
 
 function UnLearnSkill()
-    outSAY("character removesk "..SkillNumber:GetText());
+    outSAY("char removesk "..SkillNumber:GetText());
 end
 
 function AdvanceAll()
-    outSAY("character advanceallskills "..SkillsBy:GetText());
+    outSAY("char advanceallskills "..SkillsBy:GetText());
 end
 
 function LearnRiding()
-    outSAY("character learn 33388");--Apprentice Riding
-    outSAY("character learn 33391");--Journeyman Riding
-    outSAY("character learn 34090");--Expert Riding
-    outSAY("character learn 34091");--Artisan Riding
-    outSAY("character learn 54197");--Cold Weather Flying
-    outSAY("character additem 32458"); -- Ashes of Al'ar
-    outSAY("character additem 43962"); -- Reins of the White Polar Bear
-    outSAY("character additem 49290"); -- Magic Rooster Egg
+    outSAY("char learn 33388");--Apprentice Riding
+    outSAY("char learn 33391");--Journeyman Riding
+    outSAY("char learn 34090");--Expert Riding
+    outSAY("char learn 34091");--Artisan Riding
+    outSAY("char learn 54197");--Cold Weather Flying
+    outSAY("char add item 32458"); -- Ashes of Al'ar
+    outSAY("char add item 43962"); -- Reins of the White Polar Bear
+    outSAY("char add item 49290"); -- Magic Rooster Egg
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- SpellScript
 function LearnSpell()
-    outSAY("character learn "..SpellNumber:GetText());
+    outSAY("char learn "..SpellNumber:GetText());
 end
 
 function UnlearnSpell()
-    outSAY("character unlearn "..SpellNumber:GetText());
+    outSAY("char unlearn "..SpellNumber:GetText());
 end
 
 function LearnAll()
-    outSAY("character learn all");
+    outSAY("char learn all");
 end
 
 function LookupSpell()
@@ -1046,7 +1014,7 @@ local selection = UIDropDownMenu_GetText(WepskComboBox)
     elseif selection == "2H Swords" then
         wepsk = 55;
     end
-    outSAY("character advancesk "..wepsk.." "..WeaponSkillLvl:GetText());
+    outSAY("char advancesk "..wepsk.." "..WeaponSkillLvl:GetText());
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function GMH_Main(msg)
@@ -1062,7 +1030,7 @@ else
     GMH_MainMsg("/recallport or /recall or /port - Ports yourself to location");
     GMH_MainMsg("/npcspawn - spawns NPC - e.g. /npcspawn 1");
     GMH_MainMsg("/npcdelete - deleted targeted NPC");
-    GMH_MainMsg("/additem - adds item to you or target - e.g. /additem 1");
+    GMH_MainMsg("/add item - adds item to you or target - e.g. /add item 1");
     GMH_MainMsg("/announce or /an - broadcasts message to server in chatbox");
     GMH_MainMsg("/wannounce or /wan - broadcasts message to server on the screen");
     GMH_MainMsg("/gmannounce or /gman - broadcasts message to other GMs in chatbox");
@@ -1105,7 +1073,7 @@ function GMH_NPCDelete()
 end
 
 function GMH_AddItem(msg)
-    outSAY("character additem "..msg);
+    outSAY("char add item "..msg);
 end
 
 function GMH_Announce(msg)
@@ -1203,7 +1171,7 @@ SLASH_GMHSPAWN1="/npcspawn";
 SlashCmdList["GMHDELETE"] = GMH_NPCDelete;
 SLASH_GMHDELETE1="/npcdelete";
 SlashCmdList["GMHADDITEM"] = GMH_AddItem;
-SLASH_GMHADDITEM1="/additem";
+SLASH_GMHADDITEM1="/add item";
 SlashCmdList["GMHANNOUNCE"] = GMH_Announce;
 SLASH_GMHANNOUNCE1="/announce";
 SLASH_GMHANNOUNCE2="/an";
@@ -1317,7 +1285,7 @@ function ResultButton_OnEnter(button_number, self)
 end
 
 function ResultButton_OnClick(button_number)
-outSAY("character additem "..item_search_results[button_number]);
+outSAY("char add item "..item_search_results[button_number]);
 end
 ---------------------------------------------
 --            End of Item search           --

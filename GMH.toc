@@ -1,6 +1,6 @@
 ## Interface: 30300
 ## Title: |cFF00FF00GMH (GameMaster's Helper) |r
-## Version: 1.1.2
+## Version: 1.1.3
 ## Notes: An addon to manage GM commands in an AscEmu based World of Warcraft private server.
 ## URL: https://github.com/armm77
 ## X-Revision: 281
@@ -21,6 +21,8 @@ EventForm.xml
 IPBanForm.xml
 ItemForm.xml
 ItemFormSearch.xml
+ItemsetArena8.xml
+ItemsetTier10.xml
 MiscForm.xml
 ModifyForm.xml
 NPCForm.xml

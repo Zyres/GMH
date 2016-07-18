@@ -3,7 +3,7 @@
   <Frame name="WepskForm" hidden="true" parent="UIParent" movable="true" resizable="true" enableKeyboard="true" clampedToScreen="true">
     <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508883-59c2-4f83-ae10-27aaad48391b" />-->
     <Size>
-      <AbsDimension x="146" y="145" />
+      <AbsDimension x="180" y="134" />
     </Size>
     <Anchors>
       <Anchor point="RIGHT" relativeTo="UIParent">
@@ -71,7 +71,7 @@
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="13" y="-26" />
+              <AbsDimension x="31" y="-30" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -133,12 +133,12 @@
       <Button name="Done" text="Done">
         <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
         <Size>
-          <AbsDimension x="120" y="17" />
+          <AbsDimension x="70" y="17" />
         </Size>
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="13" y="-113" />
+              <AbsDimension x="92" y="-96" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -190,12 +190,12 @@
 &lt;/ArrayOfString&gt;</Property><Property name="OnSelectionChanged">&lt;?xml version="1.0"?&gt;
 &lt;string /&gt;</Property></FrameSkin>-->
         <Size>
-          <AbsDimension x="143" y="32" />
+          <AbsDimension x="144" y="32" />
         </Size>
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="3" y="-52" />
+              <AbsDimension x="18" y="-58" />
             </Offset>
           </Anchor>
         </Anchors>
@@ -216,7 +216,7 @@
             </Texture>
             <Texture name="$parentMiddle" file="Interface\Glues\CharacterCreate\CharacterCreate-LabelFrame">
               <Size>
-                <AbsDimension x="93" y="64" />
+                <AbsDimension x="94" y="64" />
               </Size>
               <Anchors>
                 <Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT" />
@@ -234,7 +234,7 @@
             </Texture>
             <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Please Select..." justifyH="RIGHT">
               <Size>
-                <AbsDimension x="118" y="10" />
+                <AbsDimension x="119" y="10" />
               </Size>
               <Anchors>
                 <Anchor point="RIGHT" relativeTo="$parentRight">
@@ -391,12 +391,12 @@ UIDropDownMenu_Initialize(this, cb_init_fn)
       <Button name="$parentComponent2" text="Go!">
         <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508884-59c2-4f83-ae10-27aaad48391b" />-->
         <Size>
-          <AbsDimension x="120" y="17" />
+          <AbsDimension x="70" y="17" />
         </Size>
         <Anchors>
           <Anchor point="TOPLEFT">
             <Offset>
-              <AbsDimension x="13" y="-90" />
+              <AbsDimension x="18" y="-96" />
             </Offset>
           </Anchor>
         </Anchors>
